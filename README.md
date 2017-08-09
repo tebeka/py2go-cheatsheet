@@ -11,6 +11,7 @@ A cheatsheet for Python programmers who are starting to write Go code.
 with open('/path/to/file') as fp:
     pass # Do something with open file
 ```
+### Go
 
 ```go
 import "os"
