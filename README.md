@@ -4,9 +4,6 @@ A cheatsheet for Python programmers who are starting to write Go code.
 
 ## Declarations
 
-<table>
-<tr>
-<td>
 ```python
 age = 80
 name = 'daffy'
@@ -17,8 +14,7 @@ ages = {  # Correct for 2017
     'taz': 63,
 }
 ```
-</td>
-<td>
+
 ```go
 age := 80
 name := "daffy"
@@ -29,9 +25,6 @@ ages := map[string]int{ // Correct for 2017
 	"taz":   63,
 }
 ```
-</td>
-</tr>
-</table>
 
 
 ## Files
