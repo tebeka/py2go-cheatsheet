@@ -28,9 +28,13 @@ def get_code(fname):
         next(lines)  # Drop START line
         lines = list(lines)
 
+    # tab -> space
+    lines = [line.replace('\t', '    ') for line in lines]
+
     # Drop indent
     indent = min(indent_size(line) for line in lines)
-    return ''.join(line[indent:] for line in lines)
+    code = ''.join(line[indent:] for line in lines)
+    return code.strip()
 
 
 def code_for(name, typ):

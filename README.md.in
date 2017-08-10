@@ -6,10 +6,21 @@ A cheatsheet for Python programmers who are starting to write Go code.
 
 code: dec
 
-
 ## Files
 
 code: file
+
+## Define Function
+
+code: func
+
+## Iterate
+
+code: iter
+
+## Iterate over Lines
+
+code: lines
 
 
 ---
