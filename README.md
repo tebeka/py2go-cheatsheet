@@ -4,6 +4,8 @@ A cheatsheet for Python programmers who are starting to write Go code.
 
 ## Declarations
 
+### Python
+
 ```python
 age = 80
 name = 'daffy'
@@ -13,7 +15,10 @@ ages = {  # Correct for 2017
     'bugs': 79,
     'taz': 63,
 }
+
 ```
+
+### Go
 
 ```go
 age := 80
@@ -24,16 +29,21 @@ ages := map[string]int{ // Correct for 2017
 	"bugs":  79,
 	"taz":   63,
 }
+
 ```
 
 
 ## Files
+
+### Python
 
 ```python
 with open('song.txt') as fp:
     pass  # Process file
 
 ```
+
+### Go
 
 ```go
 file, err := os.Open("song.txt")

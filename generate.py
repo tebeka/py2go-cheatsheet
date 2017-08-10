@@ -48,6 +48,7 @@ if __name__ == '__main__':
             print(line)
             continue
         name = match.group(1)
+        print('### Python\n')
         code_for(name, 'python')
-        print('')
+        print('\n### Go\n')
         code_for(name, 'go')
