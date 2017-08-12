@@ -2,7 +2,6 @@
 
 from sys import stdin
 import re
-from itertools import dropwhile, takewhile
 from subprocess import check_output
 
 find_code = re.compile('code: (\w+)').search
@@ -30,17 +29,33 @@ def indent_size(line):
     return len(match.group()) if match else 0
 
 
-def get_code(fname):
+def get_code(fname, sep):
+    lines = []
+    in_block = False
+    nblocks = 0
+    lnum = 0
     with open(fname) as fp:
-        lines = dropwhile(lambda line: not is_start(line), fp)
-        lines = takewhile(lambda line: not is_end(line), lines)
-        next(lines)  # Drop START line
-        lines = list(lines)
+        for line in fp:
+            if is_start(line):
+                assert not in_block, 'start inside block'
+                nblocks += 1
+                in_block = True
+                continue
+            elif is_end(line):
+                assert in_block, 'end without block'
+                lnum = 0
+                in_block = False
+            elif in_block:
+                if nblocks > 1 and lnum == 0:
+                    lines += sep
+                lines.append(line)
+                lnum += 1
 
     # tab -> space
     lines = [line.replace('\t', '    ') for line in lines]
 
     # Drop indent
+    # FIXME: Do it per block
     indent = min(indent_size(line) for line in lines)
     code = ''.join(line[indent:] for line in lines)
     return code.strip()
@@ -48,7 +63,9 @@ def get_code(fname):
 
 def code_for(name, typ):
     ext = typ[:2]
-    return get_code(f'{name}.{ext}')
+    comment = '#' if typ == 'python' else '//'
+    sep = ['\n', '{} ...\n'.format(comment), '\n']
+    return get_code(f'{name}.{ext}', sep)
 
 
 def htmlize(code, typ):

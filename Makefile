@@ -5,10 +5,10 @@ index = index.html
 all: $(index)
 
 
-$(index): index.html.in style.css pygmentize.css
+$(index): index.html.in style.css pygmentize.css *.go *.py
 	./generate-html.py < $< > $@
 
-$(readme): $(readme).in generate.py
+$(readme): $(readme).in generate.py *.go *.py
 	./generate.py < $< > $@
 
 test:

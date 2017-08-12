@@ -30,10 +30,30 @@
 
     code: iter_map
 
+    <h2><b>while</b> loop</h2>
+    <p>
+      In Go we don't have <b>while</b>, we use <b>for</b>.
+    </p>
+
+    code: while
+
     <h2>Iterate over Lines</h2>
 
     code: lines
+
+    <h2>Return Error</h2>
+    <p>
+      In Go we return error value (the're are <i>panic</i> and <i>recover</i>)
+      but they are rarely used.
+    </p>
+
+    code: error
+
+    <h2>Concurrency</h2>
+
+    code: concur
+
     <hr />
-    Miki Tebeka &lt;miki@353solutions.com&gt;
+    Miki Tebeka &lt;<a href="mailto:miki@353solutions.com">miki@353solutions.com</a>&gt;
   </body>
 </html>
