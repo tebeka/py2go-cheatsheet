@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Python &rarr; Go Cheatsheet</title>
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" type="text/css" href="pygmentize.css">
+  </head>
+  <body>
+    <h1>Python &rarr; Go Cheatsheet</h1>
+    <p>
+    A cheatsheet for Python programmers who are starting to write Go code.
+    </p>
+    <h2>Declarations</h2>
+
+    code: dec
+
+    <h2>Files</h2>
+
+    code: file
+
+    <h2>Define A Function</h2>
+
+    code: func
+
+    <h2>Iterate Over list/slice</h2>
+
+    code: iter
+
+    <h2>Iterate Over dict/map</h2>
+
+    code: iter_map
+
+    <h2>Iterate over Lines</h2>
+
+    code: lines
+    <hr />
+    Miki Tebeka &lt;miki@353solutions.com&gt;
+  </body>
+</html>

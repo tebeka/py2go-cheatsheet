@@ -1,0 +1,13 @@
+h1 {
+  width: 100%;
+  text-align: center;
+}
+
+table.code {
+  width: 100%;
+}
+
+table.code td {
+  border: 1px solid gray;
+  vertical-align: top;
+}
