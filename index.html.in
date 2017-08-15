@@ -2,15 +2,36 @@
 <html>
   <head>
     <title>Python &rarr; Go Cheatsheet</title>
-   <link rel="stylesheet" type="text/css" href="style.css">
-   <link rel="stylesheet" type="text/css" href="pygmentize.css">
+    <link 
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+      integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+      crossorigin="anonymous">
+
+    <link href='https://fonts.googleapis.com/css?family=Quando'
+    rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" type="text/css" href="pygmentize.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
+    <div class="container">
+
     <h1>Python &rarr; Go Cheatsheet</h1>
     <p>
     A cheatsheet for Python programmers who are starting to write Go code.
     </p>
-    <h2>Declarations</h2>
+    <h2>Modules</h2>
+    <table class="table table-striped">
+      <thead>
+      <tr><th>Task</th><th>Python</th><th>Go</th></tr>
+      </thead>
+      <tbody>
+	  :modules:
+      </tbody>
+    </table>
+
+
+    <h2>Types & Declarations</h2>
 
     code: dec
 
@@ -53,7 +74,23 @@
 
     code: concur
 
+    <h2>Sorting</h2>
+
+    code: sort
+
+    <h2>Web Server</h2>
+
+    In the Python example we're using <a href="http://flask.pocoo.org/">Flask</a>.
+
+    code: httpd
+
+    <h2>HTTP Request</h2>
+
+    code: request
+
     <hr />
-    Miki Tebeka &lt;<a href="mailto:miki@353solutions.com">miki@353solutions.com</a>&gt;
+    By <a href="http://353solutions.com">353solutions.com</a>
+
+    </div> <!-- container -->
   </body>
 </html>

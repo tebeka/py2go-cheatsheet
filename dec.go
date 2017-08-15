@@ -7,6 +7,7 @@ func main() {
 	// START
 	age := 80
 	name := "daffy"
+	weight := 62.3
 	loons := []string{"bugs", "daffy", "taz"}
 	ages := map[string]int{ // Correct for 2017
 		"daffy": 80,
@@ -15,5 +16,5 @@ func main() {
 	}
 	// END
 
-	fmt.Println(age, name, loons, ages)
+	fmt.Println(age, name, weight, loons, ages)
 }

@@ -2,12 +2,15 @@ h1 {
   text-align: center;
 }
 
-table.code {
+table.code, table.modules {
   width: 100%;
+}
+
+h2, table.code th {
+  text-align: center;
 }
 
 table.code td {
   width: 45%;
-  border: 1px solid gray;
   vertical-align: top;
 }

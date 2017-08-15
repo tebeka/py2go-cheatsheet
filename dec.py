@@ -1,6 +1,7 @@
 # START
 age = 80
 name = 'daffy'
+weight = 62.3
 loons = ['bugs', 'daffy', 'taz']
 ages = {  # Correct for 2017
     'daffy': 80,
@@ -9,4 +10,4 @@ ages = {  # Correct for 2017
 }
 # END
 
-print(age, name, loons, ages)
+print(age, name, weight, loons, ages)

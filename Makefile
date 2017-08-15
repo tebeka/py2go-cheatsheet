@@ -12,6 +12,7 @@ $(readme): $(readme).in generate.py *.go *.py
 	./generate.py < $< > $@
 
 test:
+	flake8 *.py
 	pytest -v
 
 clean:
@@ -24,5 +25,8 @@ pygmentize.css:
 
 fresh: clean all
 
+upload: $(index) *.css
+	s3cmd put index.html *.css s3://353-scipy/py2go/
+	s3cmd setacl s3://353-scipy/py2go/ --acl-public --recursive
 
 .PHONY: all test clean fresh

@@ -17,4 +17,5 @@ func main() {
 	for name, age := range ages { // Keys & values
 		fmt.Printf("%s is %d years old\n", name, age)
 	}
+	// END
 }

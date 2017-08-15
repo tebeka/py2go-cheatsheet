@@ -1,27 +1,43 @@
 #!/usr/bin/env python
 
-from sys import stdin
-import re
 from subprocess import check_output
+import html
+import re
+import yaml
 
 find_code = re.compile('code: (\w+)').search
 
-table = '''
-<table class="code">
+table_html = '''
+<table class="code table">
+  <thead>
   <tr>
     <th>Python</th>
     <th>Go</th>
   </tr>
+  </thead>
+  <tbody>
   <tr>
     <td>{py}</td>
     <td>{go}</td>
   </tr>
+  </tbody>
 </table>
+'''
+
+
+module_html = '''
+<tr>
+  <td>{task}</td>
+  <td><a href="https://docs.python.org/3/library/{python}.html">
+    {python}</a>
+  </td>
+  <td><a href="https://golang.org/pkg/{go}/">{go}</a></td>
+</tr>
 '''
 
 is_start = re.compile(r'(//|#) START').search
 is_end = re.compile(r'(//|#) END').search
-find_spaces = re.compile('^\s+').match
+find_spaces = re.compile('^[ \t]+').match
 
 
 def indent_size(line):
@@ -30,41 +46,36 @@ def indent_size(line):
 
 
 def get_code(fname, sep):
-    lines = []
+    blocks = []
+    block = []
     in_block = False
-    nblocks = 0
-    lnum = 0
     with open(fname) as fp:
         for line in fp:
             if is_start(line):
                 assert not in_block, 'start inside block'
-                nblocks += 1
                 in_block = True
                 continue
             elif is_end(line):
                 assert in_block, 'end without block'
-                lnum = 0
+                blocks.append(block)
+                block = []
                 in_block = False
             elif in_block:
-                if nblocks > 1 and lnum == 0:
-                    lines += sep
-                lines.append(line)
-                lnum += 1
+                block.append(line.replace('\t', '    '))
 
-    # tab -> space
-    lines = [line.replace('\t', '    ') for line in lines]
+    for block in blocks:
+        indent = min(indent_size(line) for line in block if line.strip())
+        for i, line in enumerate(block):
+            block[i] = line[indent:]
 
-    # Drop indent
-    # FIXME: Do it per block
-    indent = min(indent_size(line) for line in lines)
-    code = ''.join(line[indent:] for line in lines)
-    return code.strip()
+    codes = [''.join(block).strip() for block in blocks]
+    return sep.join(codes)
 
 
 def code_for(name, typ):
     ext = typ[:2]
     comment = '#' if typ == 'python' else '//'
-    sep = ['\n', '{} ...\n'.format(comment), '\n']
+    sep = '\n\n{} ...\n\n'.format(comment)
     return get_code(f'{name}.{ext}', sep)
 
 
@@ -73,14 +84,32 @@ def htmlize(code, typ):
     return check_output(cmd, input=code.encode()).decode()
 
 
+def modules():
+    with open('modules.yaml') as fp:
+        modules = yaml.load(fp)
+    for module in modules:
+        module['task'] = html.escape(module['task'])
+        print(module_html.format(**module))
+
+
 if __name__ == '__main__':
-    for line in stdin:
+    from argparse import ArgumentParser, FileType
+    from sys import stdin
+
+    parser = ArgumentParser()
+    parser.add_argument('--file', type=FileType(), default=stdin)
+    args = parser.parse_args()
+
+    for line in args.file:
         line = line[:-1]  # trim newline
         match = find_code(line)
-        if not match:
+        if match:
+            name = match.group(1)
+            py = htmlize(code_for(name, 'python'), 'python')
+            go = htmlize(code_for(name, 'go'), 'go')
+            print(table_html.format(py=py, go=go))
+        elif line.strip() == ':modules:':
+            modules()
+        else:
             print(line)
             continue
-        name = match.group(1)
-        py = htmlize(code_for(name, 'python'), 'python')
-        go = htmlize(code_for(name, 'go'), 'go')
-        print(table.format(py=py, go=go))

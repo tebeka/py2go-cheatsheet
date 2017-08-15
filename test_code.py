@@ -12,6 +12,8 @@ for line in open('README.md.in'):
     if not match:
         continue
     name = match.group(1)
+    if name == 'httpd':
+        continue  # Runs a server
     py_files.append(f'{name}.py')
     go_files.append(f'{name}.go')
 
