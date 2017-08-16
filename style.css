@@ -2,6 +2,15 @@ h4 {
   text-align: center;
 }
 
+img.logo {
+    width: 30px;
+    height: 30px;
+}
+
+div.right {
+    text-align: right;
+}
+
 table.code, table.modules {
   width: 100%;
 }
