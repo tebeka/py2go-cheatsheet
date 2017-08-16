@@ -4,6 +4,9 @@
 - task: json
   python: json
   go: encoding/json
+- task: CSV
+  python: csv
+  go: encoding/csv
 - task: Date & time
   python: datetime
   go: time
@@ -22,9 +25,6 @@
 - task: Path manipulation
   python: os.path
   go: path/filepath
-- task: CSV
-  python: csv
-  go: encoding/csv
 - task: crypto
   python: hashlib
   go: crypto

@@ -1,4 +1,4 @@
-h1 {
+h4 {
   text-align: center;
 }
 
@@ -6,11 +6,15 @@ table.code, table.modules {
   width: 100%;
 }
 
-h2, table.code th {
-  text-align: center;
+pre {
+  border: none;
 }
 
 table.code td {
   width: 45%;
   vertical-align: top;
+}
+
+span.title {
+    font-weight: bold;
 }

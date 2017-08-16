@@ -16,14 +16,10 @@
   <body>
     <div class="container">
 
-    <h1>Python &rarr; Go Cheatsheet</h1>
-    <p>
-    A cheatsheet for Python programmers who are starting to write Go code.
-    </p>
-    <h2>Modules</h2>
-    <table class="table table-striped">
+    <h4>Python ⇒ Go Cheatsheet</h4>
+    <table class="table table-striped table-condensed table-sm">
       <thead>
-      <tr><th>Task</th><th>Python</th><th>Go</th></tr>
+      <tr><th>Task</th><th>Python Module</th><th>Go Package</th></tr>
       </thead>
       <tbody>
 	  :modules:
@@ -31,62 +27,57 @@
     </table>
 
 
-    <h2>Types & Declarations</h2>
+    <span class="title">Types & Declarations</span>
 
     code: dec
 
-    <h2>Files</h2>
+    <span class="title">Files</span>
 
     code: file
 
-    <h2>Define A Function</h2>
+    <span class="title">Define A Function</span>
 
     code: func
 
-    <h2>Iterate Over list/slice</h2>
+    <span class="title">Iterate Over list/slice</span>
 
     code: iter
 
-    <h2>Iterate Over dict/map</h2>
+    <span class="title">Iterate Over dict/map</span>
 
     code: iter_map
 
-    <h2><b>while</b> loop</h2>
-    <p>
-      In Go we don't have <b>while</b>, we use <b>for</b>.
-    </p>
-
+    <span class="title"><i>while</i> loop</span>
     code: while
 
-    <h2>Iterate over Lines</h2>
+    <span class="title">Iterate over Lines</span>
 
     code: lines
 
-    <h2>Return Error</h2>
-    <p>
-      In Go we return error value (the're are <i>panic</i> and <i>recover</i>)
-      but they are rarely used.
-    </p>
+    <span class="title">Return Error</span>
 
     code: error
 
-    <h2>Concurrency</h2>
+    <span class="title">Concurrency</span>
 
     code: concur
 
-    <h2>Sorting</h2>
+    <span class="title">Sorting</span>
 
     code: sort
 
-    <h2>Web Server</h2>
+    <span class="title">Web Server</span>
 
-    In the Python example we're using <a href="http://flask.pocoo.org/">Flask</a>.
 
     code: httpd
 
-    <h2>HTTP Request</h2>
+    <span class="title">HTTP Request</span>
 
     code: request
+
+    <span class="title">Encode/Decode JSON</span>
+
+    code: jsons
 
     <hr />
     By <a href="http://353solutions.com">353solutions.com</a>

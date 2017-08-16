@@ -8,13 +8,7 @@ import yaml
 find_code = re.compile('code: (\w+)').search
 
 table_html = '''
-<table class="code table">
-  <thead>
-  <tr>
-    <th>Python</th>
-    <th>Go</th>
-  </tr>
-  </thead>
+<table class="code table table-sm">
   <tbody>
   <tr>
     <td>{py}</td>
