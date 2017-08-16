@@ -1,24 +1,24 @@
-- task: Parse command line arguments
-  python: argparse
-  go: flag
 - task: HTTP calls
   python: urllib
   go: net/http
 - task: json
   python: json
   go: encoding/json
-- task: Regular expressions
-  python: re
-  go: regexp
 - task: Date & time
   python: datetime
   go: time
-- task: Heap (priority queue)
-  python: heapq
-  go: container/heap
-- task: Serialization
-  python: pickle
-  go: gob
+- task: Parse command line arguments
+  python: argparse
+  go: flag
+- task: Regular expressions
+  python: re
+  go: regexp
+- task: logging
+  python: logging
+  go: log
+- task: Run external commands
+  python: subprocess
+  go: cmd/exec
 - task: Path manipulation
   python: os.path
   go: path/filepath
@@ -28,9 +28,9 @@
 - task: crypto
   python: hashlib
   go: crypto
-- task: logging
-  python: logging
-  go: log
-- task: Run external commands
-  python: subprocess
-  go: cmd/exec
+- task: Serialization
+  python: pickle
+  go: gob
+- task: Heap (priority queue)
+  python: heapq
+  go: container/heap
