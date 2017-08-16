@@ -7,7 +7,7 @@ from sys import executable
 
 py_files = []
 go_files = []
-for line in open('README.md.in'):
+for line in open('cheatsheet.html.in'):
     match = find_code(line)
     if not match:
         continue
