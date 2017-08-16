@@ -2,8 +2,24 @@ from generate import find_code
 
 import pytest
 
+from os import path
 from subprocess import check_output
 from sys import executable
+import re
+
+in_file = None
+
+with open('Makefile') as fp:
+    for line in fp:
+        match = re.search('html\s*=\s*(.*\.html)', line)
+        if match:
+            in_file = '{}.in'.format(match.group(1))
+            if not path.isfile(in_file):
+                raise SystemExit('error: cannot find {}'.format(in_file))
+            break
+    else:
+        raise SystemExit('error: cannot find html in Makefile')
+
 
 py_files = []
 go_files = []
