@@ -16,7 +16,7 @@
   <body>
     <div class="container">
 
-    <div class="row">
+    <div class="row header">
       <div class="col-4"><a href="http://353solutions.com"><img src="logo.png" class="logo"></a></div>
       <div class="col-sm-4"><h4>Python ⇒ Go Cheatsheet</h4></div>
       <div class="col-4 right"><a href="http://353solutions.com"><img src="logo.png" class="logo"></a></div>
@@ -72,7 +72,6 @@
 
     <span class="title">Web Server</span>
 
-
     code: httpd
 
     <span class="title">HTTP Request</span>
@@ -84,7 +83,7 @@
     code: jsons
 
     <hr />
-    By <a href="http://353solutions.com">353solutions.com</a>
+    <a href="http://353solutions.com">353solutions.com</a>
 
     </div> <!-- container -->
   </body>

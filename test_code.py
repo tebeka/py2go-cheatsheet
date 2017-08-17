@@ -28,17 +28,25 @@ for line in open('cheatsheet.html.in'):
     if not match:
         continue
     name = match.group(1)
-    if name == 'httpd':
-        continue  # Runs a server
     py_files.append(f'{name}.py')
     go_files.append(f'{name}.go')
 
 
 @pytest.mark.parametrize('fname', py_files)
 def test_py(fname):
-    check_output([executable, fname])
+    if fname == 'httpd.py':
+        pytest.skip()
+    if fname != 'while.py':
+        check_output([executable, fname])
+        return
+    check_output([executable, fname], input=b'nah\nno\n')
 
 
 @pytest.mark.parametrize('fname', go_files)
 def test_go(fname):
-    check_output(['go', 'run', fname])
+    if fname == 'httpd.go':
+        pytest.skip()
+    if fname != 'while.go':
+        check_output(['go', 'run', fname])
+        return
+    check_output(['go', 'run', fname], input=b'nah\nno\n')

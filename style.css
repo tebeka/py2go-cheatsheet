@@ -2,6 +2,11 @@ h4 {
   text-align: center;
 }
 
+
+div.header {
+  background: silver;
+}
+
 img.logo {
     width: 30px;
     height: 30px;
