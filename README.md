@@ -18,4 +18,10 @@ Make sure to run `make test`
 
 ## Bugs & Suggestions
 
-Miki Tebeka <miki.tebeka@gmail.com>
+Miki Tebeka <miki.tebeka@gmail.com>, https://github.com/tebeka/py2go-cheatsheet
+
+## License
+
+BSD, see [LICENCE.txt](LICENCE.txt)
+
+
