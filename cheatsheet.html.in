@@ -96,6 +96,10 @@
 
     code: jsons
 
+    <span class="title">Print Object for Debug/Log</span>
+
+    code: repr
+
     <hr />
     <a href="http://353solutions.com">353solutions.com</a>
 
