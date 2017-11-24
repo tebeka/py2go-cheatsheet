@@ -17,15 +17,15 @@
     <div class="container">
 
     <div class="row header">
-      <div class="col-sm-2"></div>
-      <div class="col-sm-8">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-6">
 				<h4>
 					<img src="python.png" class="logo" alt="Python">
 				&rarr;	
 					<img src="go.png" class="logo" alt="Go"> Cheat Sheet
 				</h4>
 			</div>
-      <div class="col-sm-2 right">
+      <div class="col-sm-3 right">
 				<a href="http://353solutions.com">
 					<img src="logo.png" class="logo" alt="353Soltions">
 				</a>
