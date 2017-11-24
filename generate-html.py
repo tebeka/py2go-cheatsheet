@@ -11,7 +11,7 @@ table_html = '''
 <table class="code table table-sm">
   <tbody>
   <tr>
-    <td>{py}</td>
+    <td class="left">{py}</td>
     <td>{go}</td>
   </tr>
   </tbody>

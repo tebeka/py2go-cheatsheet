@@ -6,8 +6,7 @@ def add(a, b):
 
 
 # START
-thr = Thread(target=add, args=(1, 2))
-thr.daemon = True
+thr = Thread(target=add, args=(1, 2), daemon=True)
 thr.start()
 # END
 

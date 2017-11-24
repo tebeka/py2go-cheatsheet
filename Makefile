@@ -19,9 +19,10 @@ pygmentize.css:
 
 fresh: clean all
 
+uri = s3://353-scipy/py2go
 upload: $(index) *.css
-	s3cmd put $(html) *.css logo.png s3://353-scipy/py2go/
-	s3cmd put $(html) s3://353-scipy/py2go/index.html
-	s3cmd setacl s3://353-scipy/py2go/ --acl-public --recursive
+	s3cmd put $(html) *.css logo.png $(uri)/
+	s3cmd put $(html) $(uri)/index.html
+	s3cmd setacl $(uri) --acl-public --recursive
 
 .PHONY: all test clean fresh

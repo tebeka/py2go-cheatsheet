@@ -17,19 +17,15 @@
     <div class="container">
 
     <div class="row header">
-      <div class="col-4">
-				<a href="http://353solutions.com">
-					<img src="logo.png" class="logo" alt="353Soltions">
-				</a>
-			</div>
-      <div class="col-sm-4">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
 				<h4>
 					<img src="python.png" class="logo" alt="Python">
-					⇒
-					<img src="go.png" class="logo" alt="Go">
+				&rarr;	
+					<img src="go.png" class="logo" alt="Go"> Cheat Sheet
 				</h4>
 			</div>
-      <div class="col-4 right">
+      <div class="col-sm-2 right">
 				<a href="http://353solutions.com">
 					<img src="logo.png" class="logo" alt="353Soltions">
 				</a>
@@ -49,30 +45,26 @@
 
     code: dec
 
-    <span class="title">Files</span>
-
-    code: file
-
     <span class="title">Define A Function</span>
 
     code: func
 
-    <span class="title">Iterate Over list/slice</span>
+    <span class="title">list/slice</span>
 
-    code: iter
+    code: list
 
-    <span class="title">Iterate Over dict/map</span>
+    <span class="title">dict/map</span>
 
-    code: iter_map
+    code: map
 
     <span class="title"><i>while</i> loop</span>
     code: while
 
-    <span class="title">Iterate over Lines</span>
+    <span class="title">Files</span>
 
-    code: lines
+    code: file
 
-    <span class="title">Return Error</span>
+    <span class="title">Exceptions/Return Error</span>
 
     code: error
 
@@ -98,10 +90,10 @@
 
     <span class="title">Print Object for Debug/Log</span>
 
-    code: repr
+    code: dbg_print
 
     <hr />
-    <a href="http://353solutions.com">353solutions.com</a>
+    By <a href="http://353solutions.com">353solutions.com</a>
 
     </div> <!-- container -->
   </body>

@@ -1,6 +1,8 @@
 package main
 
 import (
+	"bufio"
+	"fmt"
 	"log"
 	"os"
 )
@@ -12,10 +14,14 @@ func run() error {
 		return err
 	}
 	defer file.Close()
-	// Process file
-	// END
 
-	return nil
+	// Iterate over lines
+	scanner := bufio.NewScanner(file) // file is an io.Reader
+	for scanner.Scan() {
+		fmt.Println(scanner.Text())
+	}
+	return scanner.Err()
+	// END
 }
 
 func main() {
