@@ -72,6 +72,10 @@
 
     code: concur
 
+    <span class="title">Communicating between threads/goroutines</span>
+
+    code: chan
+
     <span class="title">Sorting</span>
 
     code: sort
@@ -91,6 +95,10 @@
     <span class="title">Print Object for Debug/Log</span>
 
     code: dbg_print
+
+    <span class="title">Object Oriented</span>
+
+    code: oo
 
     <hr />
     By <a href="http://353solutions.com">353solutions.com</a>

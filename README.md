@@ -1,5 +1,7 @@
 # Python -> Go Cheatsheet
 
+Code for [http://353.solutions/py2go/](http://353.solutions/py2go/]).
+
 ## Hacking
 
 ### Modules
@@ -23,5 +25,3 @@ Miki Tebeka <miki.tebeka@gmail.com>, https://github.com/tebeka/py2go-cheatsheet
 ## License
 
 BSD, see [LICENCE.txt](LICENCE.txt)
-
-

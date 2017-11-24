@@ -22,7 +22,6 @@ fresh: clean all
 uri = s3://353solutions/py2go
 upload: $(index) *.css
 	s3cmd put $(html) *.css logo.png $(uri)/
-	s3cmd put $(html) $(uri)/index.html
 	s3cmd setacl $(uri) --acl-public --recursive
 
 .PHONY: all test clean fresh
