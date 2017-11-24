@@ -12,6 +12,15 @@
     rel='stylesheet' type='text/css' />
     <link rel="stylesheet" type="text/css" href="pygmentize.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1782615-13"></script>
+    <script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-1782615-13');
+    </script>
   </head>
   <body>
     <div class="container">
@@ -26,7 +35,7 @@
 				</h4>
 			</div>
       <div class="col-sm-3 right">
-				<a href="http://353solutions.com">
+				<a href="https://www.353.solutions">
 					<img src="logo.png" class="logo" alt="353Soltions">
 				</a>
 			</div>
