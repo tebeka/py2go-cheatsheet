@@ -1,6 +1,6 @@
-# Python -> Go Cheatsheet
+# Python → Go Cheat Sheet
 
-Code for [http://353.solutions/py2go/](http://353.solutions/py2go/]).
+Code for [Python → Go Cheat](http://353.solutions/py2go/index.html]).
 
 ## Hacking
 
