@@ -21,7 +21,7 @@
   go: log
 - task: Run external commands
   python: subprocess
-  go: cmd/exec
+  go: os/exec
 - task: Path manipulation
   python: os.path
   go: path/filepath
@@ -30,7 +30,7 @@
   go: crypto
 - task: Serialization
   python: pickle
-  go: gob
+  go: encoding/gob
 - task: Heap (priority queue)
   python: heapq
   go: container/heap
