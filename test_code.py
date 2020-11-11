@@ -11,7 +11,7 @@ in_file = None
 
 with open('Makefile') as fp:
     for line in fp:
-        match = re.search('html\s*=\s*(.*\.html)', line)
+        match = re.search(r'html\s*=\s*(.*\.html)', line)
         if match:
             in_file = '{}.in'.format(match.group(1))
             if not path.isfile(in_file):

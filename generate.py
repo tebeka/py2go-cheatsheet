@@ -4,7 +4,7 @@ from sys import stdin
 import re
 from itertools import dropwhile, takewhile
 
-find_code = re.compile('code: (\w+)').search
+find_code = re.compile(r'code: (\w+)').search
 
 th = '''
 Python | Go
@@ -13,7 +13,7 @@ Python | Go
 
 is_start = re.compile(r'(//|#) START').search
 is_end = re.compile(r'(//|#) END').search
-find_spaces = re.compile('^\s+').match
+find_spaces = re.compile(r'^\s+').match
 
 
 def indent_size(line):

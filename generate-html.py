@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 
-from subprocess import check_output
 import html
 import re
+from subprocess import check_output
+
 import yaml
 
-find_code = re.compile('code: (\w+)').search
+find_code = re.compile(r'code: (\w+)').search
 
 table_html = '''
 <table class="code table table-sm">
