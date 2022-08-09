@@ -7,5 +7,5 @@ daffy = Actor(
     name='Daffy',
     age=80,
 )
-print('{!r}'.format(daffy))
+print(f'{daffy!r}')
 # END

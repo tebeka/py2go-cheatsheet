@@ -26,7 +26,7 @@ module_html = '''
   <td><a href="https://docs.python.org/3/library/{python}.html">
     {python}</a>
   </td>
-  <td><a href="https://golang.org/pkg/{go}/">{go}</a></td>
+  <td><a href="https://pkg.go.dev/{go}/">{go}</a></td>
 </tr>
 '''
 
@@ -81,7 +81,7 @@ def htmlize(code, typ):
 
 def modules():
     with open('modules.yaml') as fp:
-        modules = yaml.load(fp)
+        modules = yaml.safe_load(fp)
     for module in modules:
         module['task'] = html.escape(module['task'])
         print(module_html.format(**module))

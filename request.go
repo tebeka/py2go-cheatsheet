@@ -18,10 +18,12 @@ func main() {
 	defer resp.Body.Close()
 
 	dec := json.NewDecoder(resp.Body)
-	reply := make(map[string]interface{})
+	var reply struct {
+		Origin string `json:"origin"`
+	}
 	if err := dec.Decode(&reply); err != nil {
 		log.Fatalf("error: can't decode reply - %s", err)
 	}
-	fmt.Println(reply["origin"])
+	fmt.Println(reply.Origin)
 	// END
 }

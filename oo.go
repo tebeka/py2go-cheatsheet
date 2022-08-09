@@ -4,15 +4,15 @@ import "fmt"
 
 // START
 type Cat struct {
-	name string
+	Name string
 }
 
 func NewCat(name string) *Cat {
-	return &Cat{name: name}
+	return &Cat{Name: name}
 }
 
 func (c *Cat) Greet(other string) {
-	fmt.Printf("Meow %s, I'm %s\n", other, c.name)
+	fmt.Printf("Meow %s, I'm %s\n", other, c.Name)
 }
 
 // END
